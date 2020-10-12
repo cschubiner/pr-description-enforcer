@@ -80,7 +80,7 @@ async function run() {
     const prDescription = await getPrDescription(client)
     const prTemplate = await getPrTemplate(client, PR_TEMPLATE_PATHS)
 
-    if (!prDescription || prDescription === prTemplate) {
+    if (!prDescription || prDescription.includes(prTemplate)) {
       core.setFailed('PR description missing');
     }
   } catch (error) {

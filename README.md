@@ -21,7 +21,7 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - uses: derkinderfietsen/pr-description-enforcer@v1
+            - uses: cschubiner/pr-description-enforcer@v1
               with:
                   repo-token: '${{ secrets.GITHUB_TOKEN }}'
 
